@@ -97,11 +97,9 @@ class Album extends Component {
 
    renderButton(song, index) {
      if (this.state.isPlaying && this.state.currentSong === song) {
-       return (<button><span className="icon ion-md-pause"></span></button>)
-     } else if (!this.state.isPlaying && this.state.currentSong === song) {
-       return (<button><span className="icon ion-md-play"></span></button>)
+       return (<button><span className="ion-pause"></span></button>)
      } else if (this.state.hover === index) {
-       return (<button><span className="icon ion-md-play"></span></button>)
+       return (<button><span className="ion-play"></span></button>)
      } else {
         return (<span>{index + 1}</span>)
     }
@@ -154,7 +152,7 @@ class Album extends Component {
             className="song" key={index} onClick={() => this.handleSongClick(song)} >
                   <td>{this.renderButton(song, index)}</td>
                   <td>{song.title}</td>
-                  <td>{song.duration}</td>
+                  <td>{this.formatTime(song.duration)}</td>
                   </tr>
                 )
               }
@@ -178,3 +176,5 @@ class Album extends Component {
  }
 
 export default Album;
+
+// Almost complete
