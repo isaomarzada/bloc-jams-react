@@ -48,3 +48,15 @@ background-image: url("/assets/images/blurred_backgrounds/blur_bg_3.jpg");
   flex: 33.3%;
   padding-bottom: 135px;
 }
+
+#album-cover {
+  float: left;
+  padding-left: 60px
+}
+
+.album-info {
+  float: bottom;
+  height: 330px;
+  padding-top: 60px;
+  font-size: 17px
+}
